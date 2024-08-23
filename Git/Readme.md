@@ -60,3 +60,6 @@ Cómo conectar un repositorio de GitHub a nuestro documento local Si queremos co
 **Click en Generate new token aquí se puede colocar un nombre, la fecha de expiración.**
 
 **Tildar en repo y luego click en el botón verde Generate token**
+
+
+agrego cambios para crear conflicto en las ramas
