@@ -10,9 +10,11 @@ seleccionArgentina = {
     15: {"Nombre": "Gonzalo Montiel", "Edad": 27, "Altura": 1.75, "Precio": "10 Millones", "Posicion": "Lateral derecho"}
 }
 
-print(seleccionArgentina) # Muestra todo el diccionario
-print("\n",seleccionArgentina[19]) # Muestra un elemento del diccionario, se invoca con clave.
-print("\n---- Valores del diccionario: ---- ",seleccionArgentina.values()) # Muestra los valores del diccionario, se incova con values() -> valor.
+print(seleccionArgentina)  # Muestra todo el diccionario
+# Muestra un elemento del diccionario, se invoca con clave.
+print("\n", seleccionArgentina[19])
+# Muestra los valores del diccionario, se incova con values() -> valor.
+print("\n---- Valores del diccionario: ---- ", seleccionArgentina.values())
 
 print("\n---- Recorremos el diccionario con FOR para obtener la clave: ----")
 for llave in seleccionArgentina:
@@ -27,7 +29,7 @@ for clave, valor in seleccionArgentina.items():
     print(clave, valor)
 
 print("\nTenemos cargados en el diccionario la cantidad de:", end=" ")
-print(len(seleccionArgentina),"jugadores de la seleccion Argentina.")
+print(len(seleccionArgentina), "jugadores de la seleccion Argentina.")
 
 for i in seleccionArgentina:
     print(f"\n{i} -> {seleccionArgentina[i]}")

@@ -3,5 +3,6 @@
 
 tupla = (13, 1, 8, 3, 2, 5, 8)
 
-listaMenorA5 = [numero for numero in tupla if numero < 5] # El for va a iterar numero por numero en la tupla y va a guardar todos los numeros menores a 5 en la lista listaMenorA5.
+# El for va a iterar numero por numero en la tupla y va a guardar todos los numeros menores a 5 en la lista listaMenorA5.
+listaMenorA5 = [numero for numero in tupla if numero < 5]
 print(listaMenorA5)
