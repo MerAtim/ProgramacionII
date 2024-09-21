@@ -1,6 +1,5 @@
 ![image](https://github.com/user-attachments/assets/191083e9-5cc4-470b-8217-096a8d8d4618)
 
-
 # **Clase 1**
 
 **COMANDOS**
@@ -267,12 +266,12 @@ git tag
 
 # **Clase 6**
 
-## **Error con los tags**
-## Investigación: ¿Qué pasa si por error cargamos un tag dos veces?
+### **Error con los tags**
+### Investigación: ¿Qué pasa si por error cargamos un tag dos veces?
 
-## ¿Cómo solucionarías este problema o error?
+### ¿Cómo solucionarías este problema o error?
 
-## DESARROLLO:
+### DESARROLLO:
 
 ### En Git, un tag es una referencia a un commit específico y se utiliza comúnmente para marcar versiones de un proyecto.
 
@@ -288,21 +287,33 @@ git tag
     git tag v1.0
 ### Esto producirá un error: "fatal: tag 'v1.0' already exists".
 
+![CapturaGit25](https://github.com/user-attachments/assets/6f3d11f0-d413-48fb-8dfe-a6b4fd9caa18)
+
 ### Si necesitas cambiar el tag (por ejemplo, apuntarlo a un commit diferente), deberás eliminar el tag existente primero, ya que no puedes sobrescribirlo directamente.
 
     ```bash
     git tag -d v1.0  # Elimina el tag
     git tag v1.0 -m "nuevoCommit"
-# Crea un nuevo tag apuntando a un commit diferente
+### Crea un nuevo tag apuntando a un commit diferente
+
+![CapturaGit26](https://github.com/user-attachments/assets/15e39b4f-7c22-47f3-9d9f-db6b404e8e3e)
 
 ### Considera usar tags anotados en lugar de tags ligeros. Los tags anotados incluyen más información (como el autor y la fecha) y son más fáciles de manejar:
 
-   ```bash
-git tag -a v1.0 -m "Versión 1.0"  # Crea un tag anotado
+    ```bash
+      git tag -a v1.0 -m "Versión 1.0"  # Crea un tag anotado
+
+![CapturaGit27](https://github.com/user-attachments/assets/e15d842b-a3f7-4438-8081-7c30a9d343c6)
 
 ### Para ver la información de un tag anotado en Git, puedes usar el siguiente comando:
 
-git show Version4.0
+      ```bash
+      git show Version4.0
 
 ### Tambien se pueden ver los detalles de los tags con este comando:
-### Ver detalles de todos los tags: git show-ref --tags
+### Ver detalles de todos los tags: 
+
+      ```bash
+      git show-ref --tags
+
+![CapturaGit28](https://github.com/user-attachments/assets/747a8e40-6018-425f-80dc-5c6259610ab0)
