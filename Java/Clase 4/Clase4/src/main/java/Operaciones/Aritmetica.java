@@ -5,6 +5,25 @@ public class Aritmetica{
     
     int a, b;
     
+    // Constructor es un metodo especial. Cumple 3 funciones importantes:
+    // • Nos sirve para crear el objeto
+    // • Reserva un espacio en memoria 
+    // • Sirve para inicializar los atributos de la clase
+
+    public Aritmetica() { // El constructor vacio se crea por defecto.
+        System.out.println("Se está  ejecutando el constructor N° 1");
+    }
+            
+  // Sobrecarga de metodos: La sobrecarga de métodos es cuando se tiene 
+  // varios métodos en un programa que tienen el mismo nombre, pero hacen cosas diferentes. 
+  // Se diferencian por la cantidad o el tipo de información que reciben (parámetros).
+    
+    public Aritmetica(int a, int b) { // No se crea por defecto
+        this.a = a;
+        this.b = b;
+        System.out.println("Se esta ejecutando el constructor N° 2");
+    }
+        
     // Metodos
     
     public void sumarNumeros(){
