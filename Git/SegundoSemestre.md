@@ -208,59 +208,101 @@ cat ~/.ssh/id_rsa.pub
 
 # **Clase 5**
 
-Git tag y versiones en GitHub
+**Git tag y versiones en GitHub**
 
-En Git, las etiquetas o Git tags tienen un papel importante al asignar versiones a los commits más significativos de un proyecto. Aprender a utilizar el comando git tag, entender los diferentes tipos de etiquetas, cómo crearlas, eliminarlas y compartirlas, es esencial para un flujo de trabajo eficiente.
+**En Git, las etiquetas o Git tags tienen un papel importante al asignar versiones a los commits más significativos de un proyecto. Aprender a utilizar el comando git tag, entender los diferentes tipos de etiquetas, cómo crearlas, eliminarlas y compartirlas, es esencial para un flujo de trabajo eficiente.**
 
-Creación de etiquetas en Git
+**Creación de etiquetas en Git**
 
 ```sh
 git tag
 
 ```
 
-Sustituye con un identificador semántico que refleje el estado del repositorio en el momento de la creación. Git admite etiquetas anotadas y ligeras.
+**Sustituye con un identificador semántico que refleje el estado del repositorio en el momento de la creación. Git admite etiquetas anotadas y ligeras.**
 
-Listado de etiquetas
-Para obtener una lista de etiquetas en el repositorio, ejecuta el siguiente comando:
+**Listado de etiquetas**
+**Para obtener una lista de etiquetas en el repositorio, ejecuta el siguiente comando:**
 
-Para crear una etiqueta, ejecuta el siguiente comando:
+**Para crear una etiqueta, ejecuta el siguiente comando:**
 
-Las etiquetas anotadas almacenan información adicional como la fecha, etiquetador y correo electrónico, y son ideales para publicaciones públicas. Las etiquetas ligeras son más simples y se emplean como “marcadores” de una confirmación específica.
+**Las etiquetas anotadas almacenan información adicional como la fecha, etiquetador y correo electrónico, y son ideales para publicaciones públicas. Las etiquetas ligeras son más simples y se emplean como “marcadores” de una confirmación específica.**
 
-git tag
+### **git tag**
 
-Esto mostrará una lista de las etiquetas existentes, como:
+**Esto mostrará una lista de las etiquetas existentes, como:**
 
-v1.0
+### **v1.0**
 
-v1.1
+### **v1.1**
 
-v1.2
+### **v1.2**
 
 ![CapturaGit22](https://github.com/user-attachments/assets/498d6190-0d7d-4d7e-b1ac-f92e92dd8be9)
 
-Para perfeccionar la lista, puedes utilizar opciones adicionales, como -l con una expresión comodín.
+**Para perfeccionar la lista, puedes utilizar opciones adicionales, como -l con una expresión comodín.**
 
-Uso compartido de etiquetas
+**Uso compartido de etiquetas**
 
-Compartir etiquetas requiere un enfoque explícito al usar el comando git push. Por defecto, las etiquetas no se envían automáticamente. Para enviar etiquetas específicas, utiliza:
+**Compartir etiquetas requiere un enfoque explícito al usar el comando git push. Por defecto, las etiquetas no se envían automáticamente. Para enviar etiquetas específicas, utiliza:**
 
-git push origin
+**git push origin**
 
-Para enviar varias etiquetas a la vez, usa:
+**Para enviar varias etiquetas a la vez, usa:**
 
-git push origin --tags
+**git push origin --tags**
 
 ![CapturaGit23](https://github.com/user-attachments/assets/9139f697-2420-4ef4-8ed4-3bf12b689ae2)
 
-Eliminación de etiquetas
-Para eliminar una etiqueta, usa el siguiente comando:
+**Eliminación de etiquetas**
+**Para eliminar una etiqueta, usa el siguiente comando:**
 
-git tag -d
+### **git tag -d***
 
-Esto eliminará la etiqueta identificada por en el repositorio local.
+**Esto eliminará la etiqueta identificada por en el repositorio local.**
 
 ![CapturaGit24](https://github.com/user-attachments/assets/169b4110-4a1d-4078-b3a9-9e1481a73079)
 
-En resumen, las etiquetas en Git son esenciales para asignar versiones y capturar instantáneas importantes en el historial de un proyecto. Aprender a crear, listar, compartir y eliminar etiquetas mejorará tu flujo de trabajo con Git.
+**En resumen, las etiquetas en Git son esenciales para asignar versiones y capturar instantáneas importantes en el historial de un proyecto. Aprender a crear, listar, compartir y eliminar etiquetas mejorará tu flujo de trabajo con Git.**
+
+# **Clase 6**
+
+## **Error con los tags**
+## Investigación: ¿Qué pasa si por error cargamos un tag dos veces?
+
+## ¿Cómo solucionarías este problema o error?
+
+## DESARROLLO:
+
+### En Git, un tag es una referencia a un commit específico y se utiliza comúnmente para marcar versiones de un proyecto.
+
+- ### Problema: Si intentamos crear un tag con el mismo nombre que uno existente, Git mostrrá un error. Los tags en Git deben ser únicos dentro de un repositorio.
+
+## Ejemplo
+
+1. Crea un tag:
+
+   ```bash
+    git tag v1.0
+### Intentar crear el mismo tag nuevamente provocará un error
+    git tag v1.0
+### Esto producirá un error: "fatal: tag 'v1.0' already exists".
+
+### Si necesitas cambiar el tag (por ejemplo, apuntarlo a un commit diferente), deberás eliminar el tag existente primero, ya que no puedes sobrescribirlo directamente.
+
+    ```bash
+    git tag -d v1.0  # Elimina el tag
+    git tag v1.0 -m "nuevoCommit"
+# Crea un nuevo tag apuntando a un commit diferente
+
+### Considera usar tags anotados en lugar de tags ligeros. Los tags anotados incluyen más información (como el autor y la fecha) y son más fáciles de manejar:
+
+   ```bash
+git tag -a v1.0 -m "Versión 1.0"  # Crea un tag anotado
+
+### Para ver la información de un tag anotado en Git, puedes usar el siguiente comando:
+
+git show Version4.0
+
+### Tambien se pueden ver los detalles de los tags con este comando:
+### Ver detalles de todos los tags: git show-ref --tags
