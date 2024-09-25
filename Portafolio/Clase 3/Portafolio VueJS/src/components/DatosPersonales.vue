@@ -1,13 +1,16 @@
 <script setup>
+import linkedinIcon from '../assets/linkedin_icon.svg';
+import githubIcon from '../assets/github_icon.svg';
+import cvIcon from '../assets/cv_resume_icon.svg';
 const title = "Maria Mercedes Atim";
 const descripcion = "Tecnica Universitaria en Programación - UTN";
 const residencia = "General San Martin, Buenos Aires, Argentina";
 const presentacion = "Hola, bienvenido a mi portafolio de proyectos. Soy una desarrolladora FullStack con experiencia en desarrollo de aplicaciones web y móviles.";
 const telefono = "+54 9 11 1212-1414";
 const redesSociales = [
-    {id: 1, name: "LinkedIn", src: "../assets/linkedin_icon.svg", url: "https://www.linkedin.com/in/maria-mercedes-atim-648898280/"},
-    {id: 2, name: "GitHub", src: "../assets/github_icon.svg", url: "https://github.com/MerAtim/"},
-    {id: 2, name: "Curriculum Vitae", src: "../assets/cv_resume_icon.svg", url: "https://www.canva.com/design/DAF7k0BgkOc/dOVgmgYoyrsUaBKbXUtFIQ/edit"}
+    {id: 1, name: "LinkedIn", src: linkedinIcon, url: "https://www.linkedin.com/in/maria-mercedes-atim-648898280/"},
+    {id: 2, name: "GitHub", src: githubIcon, url: "https://github.com/MerAtim/"},
+    {id: 3, name: "Curriculum Vitae", src: cvIcon, url: "https://www.canva.com/design/DAF7k0BgkOc/dOVgmgYoyrsUaBKbXUtFIQ/edit"}
 ];
 </script>
 
@@ -29,8 +32,13 @@ const redesSociales = [
 </template>
 
 <style scoped>
-h1{
-    font-size: 2.5rem;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playwrite+ES+Deco:wght@100..400&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rochester&family=Updock&display=swap');
+
+h1 {
+font-family: 'Great Vibes', cursive;
+font-size: 60px;
+font-weight: bolder;
 }
 
 p{
@@ -40,11 +48,12 @@ p{
 }
 
 .card{
-    background-color: rgb(28, 41, 52);
+    background-color: #E24A68;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
     text-align: center;
+    font-family: Montserrat, sans-serif;
 }
 
 .container-lista{

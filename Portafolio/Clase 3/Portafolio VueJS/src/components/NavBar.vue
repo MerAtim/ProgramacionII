@@ -20,13 +20,13 @@ const navegacion= ref([
 
 <style>
 .navbar {
-    background-color:var(--vt-c-indigo);
-    color: #fff;
+    background-color:#E24A68;
+    color: #000000;
     padding: 0.5rem 1rem;
     align-items: center;
 }
 .navbar-item {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     margin-right: 1rem;
 }
@@ -38,8 +38,11 @@ justify-content: flex-end;
 list-style: none;
 }
 a {
+font-family: Montserrat, sans-serif;
 border: 1px solid ;
-border-color: hsla(160, 100%, 37%, 0.2);
+border-color: #E24A68;
+color: black;
+font-weight: bold;
 border-radius: 5px;
   /* Elimina la subrayado de los enlaces y elementos con clase "green" */
 text-decoration: none;
@@ -51,7 +54,7 @@ padding: 5px;
 
 a:hover {
     /* Cambia el color de fondo al pasar el mouse sobre un enlace */
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: hsla(0, 0%, 100%, 0.2);
 }
 
 @media (max-width: 768px) {
