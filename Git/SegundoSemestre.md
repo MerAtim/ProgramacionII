@@ -120,7 +120,6 @@ Seguir la secuencia: **Ingresamos a nuestra cuenta de GitHub.**
 
 **Frente al cambio de nombre de rama master a main, suele suceder que en el repo de GitHub se hayan creado dos ramas, la rama master y la rama main, se debe ir al repo, settings y ahí se puede cambiar la rama principal, en vez de que siga siendo master, que sea la rama main, luego de eso ya podemos borrar la rama master.**
 
-
 # **Clase 3**
 
 Cambios en GitHub: de master a main
@@ -181,6 +180,7 @@ Mac:
 pbcopy < ~/.ssh/id_rsa.pub
 
 ### Windows (Git Bash):
+
 ### clip < ~/.ssh/id_rsa.pub
 
 Linux (Ubuntu):
@@ -267,6 +267,7 @@ git tag
 # **Clase 6**
 
 ### **Error con los tags**
+
 ### Investigación: ¿Qué pasa si por error cargamos un tag dos veces?
 
 ### ¿Cómo solucionarías este problema o error?
@@ -283,8 +284,12 @@ git tag
 
    ```bash
     git tag v1.0
+   ```
+
 ### Intentar crear el mismo tag nuevamente provocará un error
+
     git tag v1.0
+
 ### Esto producirá un error: "fatal: tag 'v1.0' already exists".
 
 ![CapturaGit25](https://github.com/user-attachments/assets/6f3d11f0-d413-48fb-8dfe-a6b4fd9caa18)
@@ -294,6 +299,7 @@ git tag
     ```bash
     git tag -d v1.0  # Elimina el tag
     git tag v1.0 -m "nuevoCommit"
+
 ### Crea un nuevo tag apuntando a un commit diferente
 
 ![CapturaGit26](https://github.com/user-attachments/assets/15e39b4f-7c22-47f3-9d9f-db6b404e8e3e)
@@ -307,13 +313,22 @@ git tag
 
 ### Para ver la información de un tag anotado en Git, puedes usar el siguiente comando:
 
-      ```bash
+    ```bash
       git show Version4.0
 
 ### Tambien se pueden ver los detalles de los tags con este comando:
-### Ver detalles de todos los tags: 
 
-      ```bash
+### Ver detalles de todos los tags:
+
+    ```bash
       git show-ref --tags
 
 ![CapturaGit28](https://github.com/user-attachments/assets/747a8e40-6018-425f-80dc-5c6259610ab0)
+
+# **Clase 7**
+
+**Error con los tags**
+**Investigación: Si un tag es imposible generarlo dos veces ¿Cómo es que existe el error de dos tags con el mismo nombre?**
+
+
+**¿Cómo se origina este problema o error?**
