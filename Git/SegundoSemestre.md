@@ -330,5 +330,10 @@ git tag
 **Error con los tags**
 **Investigación: Si un tag es imposible generarlo dos veces ¿Cómo es que existe el error de dos tags con el mismo nombre?**
 
+![CapturaGit30](https://github.com/user-attachments/assets/9d7d9501-b699-42e5-8bdc-2668b7e6b9f3)
 
 **¿Cómo se origina este problema o error?**
+
+![CapturaGit29](https://github.com/user-attachments/assets/227dabe3-22d4-4ec4-8325-f164bf3824c7)
+
+# **Clase 8**
