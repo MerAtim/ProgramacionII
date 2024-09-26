@@ -21,14 +21,14 @@ public class Aritmetica{
     public Aritmetica(int a, int b) { // No se crea por defecto
         this.a = a;
         this.b = b;
-        System.out.println("Se esta ejecutando el constructor N° 2");
+        System.out.println("\nSe esta ejecutando el constructor N° 2");
     }
         
     // Metodos
     
     public void sumarNumeros(){
         int resultado = a+b;
-        System.out.println("resultado = " + resultado);  // Enviar información a la consola NO es lo mismo que retornar un valor. 
+        System.out.println("\nMetodo VOID: resultado = " + resultado);  // Enviar información a la consola NO es lo mismo que retornar un valor. 
     }   
     
     public int sumarConRetorno(){ //Retorna un valor entero
