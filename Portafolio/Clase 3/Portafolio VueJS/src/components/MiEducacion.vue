@@ -26,16 +26,26 @@ educacion.value = [
 ];
 </script>
 <template>
-    <ul>
-        <li v-for="(item, index) in educacion" :key="index" :style="{ '--fecha-color': fechaColor[index].color}">
-        <div class="fecha">{{ item.fecha }}</div>
-        <h3 class="title">{{ item.title }}</h3>
-        <div class="descripcion">{{ item.descripcion }}</div>
-        <!--Aqui vemos con el uso de b-vind (:) que bindeamos el atributo href de html con el item.enlace-->
-        <a class="enlace" :href="item.enlace" target="_blank">Diploma</a>
-    </li>
-    </ul>
+  <ul>
+      <li v-for="(item, index) in educacion" :key="index" :style="{ '--fecha-color': fechaColor[index].color}">
+          <div class="fecha">{{ item.fecha }}</div>
+          <h3 class="title">{{ item.title }}</h3>
+          <div class="descripcion">{{ item.descripcion }}</div>
+          <div>
+              <span v-if="item.enlace">Diploma: </span>
+              <a v-if="item.enlace" class="enlace" :href="item.enlace" target="_blank">Ver Diploma</a>
+              <div v-if="item.enlaces && item.enlaces.length">
+                  <span>Diplomas: </span>
+                  <span v-for="(enlace, enlaceIndex) in item.enlaces" :key="enlaceIndex">
+                      <a class="enlace" :href="enlace.url" target="_blank">{{ enlace.texto }}</a>
+                      <span v-if="enlaceIndex < item.enlaces.length - 1">, </span>
+                  </span>
+              </div>
+          </div>
+      </li>
+  </ul>
 </template>
+
 <style scoped>
 /* Reseteo de estilos básicos para todos los elementos y pseudo-elementos */
 *,
@@ -186,12 +196,23 @@ bottom: 0.25rem; /* Coloca la sombra justo*/
 }
 
 .enlace{
-    font-size: large;
+    font-size: 22px;
     color: blue;
     text-align: center;
     font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 1px solid blue;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    width: 400px;
+    height: 60px;
 }
 
+.enlace:hover {
+    background-color: rgba(0, 0, 255, 0.1); /* Fondo al pasar el ratón */
+}
 
 /* Media query para pantallas anchas (40rem o más) */
 @media (min-width: 40rem) {
