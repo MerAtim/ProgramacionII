@@ -19,6 +19,16 @@ class Persona{ // Clase Padre
     set apellido(apellido){ // Modificar un dato
         this._apellido = apellido;
     }
+
+    nombreCompleto(){
+        return this._nombre+" "+this._apellido;
+    }
+// Sobreescribiendo el metodo de la super clase padre Object
+    toString(){ //devuelve un String
+        //Se aplica El polimorfismo que es un principio de la programación orientada a objetos que permite que diferentes clases implementen métodos con el mismo nombre, pero con comportamientos específicos. Esto permite tratar objetos de distintas clases de manera uniforme, mejorando la flexibilidad y mantenibilidad del código.
+        //El metodo que se ejecuta depende si es una referencia de tipo padre o hija
+    return this.nombreCompleto();
+    }
 }
 
 class Empleado extends Persona{ // Clase hija o subclase
@@ -33,10 +43,15 @@ class Empleado extends Persona{ // Clase hija o subclase
     set departamento(departamento){
         this._departamento = departamento
     }
+
+    // Sobreescritura (Modificar el comportamiento del metodo de la clase padre)
+    nombreCompleto(){
+        return super.nombreCompleto()+ ", " + this._departamento;
+    }
 }
 
 let persona1 = new Persona("Mariana", "Aguilera");
-let persona2 = new Persona("Melina", "Aguilar");
+let persona2 = new Persona("Melina", "Aguilar", "");
 console.log(persona1,"\n",persona2); // Mostramos ambos objetos
 
 console.log("\nUsamos el método GET():");
@@ -56,3 +71,9 @@ console.log("Ahora persona2 es: ",persona2.nombre, persona2.apellido);
 console.log("\nCreacion clase hija: ");
 let empleado1 = new Empleado("Cirano", "Molina", "Sistemas");
 console.log(empleado1);
+console.log("\nMetodo heredado de la clase padre: nombreCompleto(): ",empleado1.nombreCompleto());
+
+// Object.prototype.toString  Es una manera de acceder de forma dinamica a los atributos y métodos
+
+console.log("\nMetodo de la clase padre toString aplicando polimorfismo usando la forma de la clase hija, de ésta manera muestra nombre completo y departamento de trabajo: ",empleado1.toString());
+console.log("En este caso solo trae el metodo de la clase padre: ", persona1.toString());
