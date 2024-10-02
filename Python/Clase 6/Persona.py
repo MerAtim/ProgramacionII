@@ -23,5 +23,6 @@ print(f"El Objeto 1 Modificado, de la clase Persona ahora es: {persona1.nombre},
 # Los atributos son caracteristicas
 # Los metodos son el comportamiento que van a tener los objetos. Es igual que una funcion, pero al metodo se lo asocia con una clase. La funcion no.
 print("\nINVOCAMOS EL METODO MOSTRARDETALLE():")
-persona1.mostrarDetalle()
+persona1.mostrarDetalle() # La referencia se pasa de manera automática.
 persona2.mostrarDetalle()
+Persona.mostrarDetalle(persona1) # Debemos pasarle una referencia para el self o nos mostrará un error.

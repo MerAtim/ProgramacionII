@@ -3,6 +3,7 @@ import DatosPersonales from './components/DatosPersonales.vue';
 import MiEducacion from './components/MiEducacion.vue';
 import NavBar from './components/NavBar.vue';
 import MiExperiencia from './components/MiExperiencia.vue';
+
 </script>
 
 <template>

@@ -2,6 +2,8 @@
 import linkedinIcon from '../assets/linkedin_icon.svg';
 import githubIcon from '../assets/github_icon.svg';
 import cvIcon from '../assets/cv_resume_icon.svg';
+import LineMdPhoneCallTwotoneLoop from './LineMdPhoneCallTwotoneLoop.vue';
+
 const title = "Maria Mercedes Atim";
 const descripcion = "Tecnica Universitaria en Programación - UTN";
 const residencia = "General San Martin, Buenos Aires, Argentina";
@@ -25,7 +27,10 @@ const redesSociales = [
             <a :href="red.url"><img class="icon-redsocial" :src="red.src" width="35rem" :alt="red.name"></a>
         </li>
     </ul>
-    <h3>☎ Mi telefono personal: {{ telefono }}</h3>
+    <h3>
+            <LineMdPhoneCallTwotoneLoop style="width: 1.5em; height: 1.5em; vertical-align: middle;" />
+            Mi teléfono personal: {{ telefono }}
+        </h3>
     <h4>{{ residencia }}</h4>
 </div>
 </section>
@@ -79,8 +84,16 @@ p{
     box-shadow: 0 0 5px rgba(251, 249, 249, 0.934);
 }
 
-h3{
+h3 {
     font-size: 1.2rem;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+h3 svg {
+    margin-right: 8px;
 }
 </style>
