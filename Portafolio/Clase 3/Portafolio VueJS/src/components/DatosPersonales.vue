@@ -37,12 +37,11 @@ const redesSociales = [
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playwrite+ES+Deco:wght@100..400&family=Sacramento&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rochester&family=Updock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playwrite+ES+Deco:wght@100..400&family=Sacramento&family=Sevillana&family=Imperial+Script&family=Cookie&family=MonteCarlo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rochester&family=Updock&family=Delius&family=Macondo&family=Oregano:ital@0;1&family=Pinyon+Script&family=Rouge+Script&family=Style+Script&display=swap');
 
 h1 {
-font-family: 'Great Vibes', cursive;
-font-size: 60px;
+font-family: 'MonteCarlo', cursive;
+font-size: 80px;
 font-weight: bolder;
 }
 
