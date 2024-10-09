@@ -366,5 +366,10 @@ git checkout branchName      # Movernos a otra rama
 git checkout -b nombre-de-la-rama  # Crear una rama en el repositorio local
 git push origin nombre-de-la-rama   # Publicar una rama local al repositorio remoto
 
+![CapturaGit31](https://github.com/user-attachments/assets/b349499e-f676-4a98-88e0-e69bdfeedd1b)
 
 ## Recuerda que podemos ver gráficamente nuestro entorno y flujo de trabajo local con Git utilizando el comando gitk. Gitk fue el primer visor gráfico que se desarrolló para ver de manera gráfica el historial de un repositorio de Git.
+
+![CapturaGit32](https://github.com/user-attachments/assets/74ef692d-dcee-4479-b859-31ddd66ad2e2)
+
+# **Clase 9**
