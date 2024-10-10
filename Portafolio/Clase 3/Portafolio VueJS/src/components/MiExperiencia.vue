@@ -1,9 +1,7 @@
 <script setup>
 import { ref } from "vue";
-import appULPJavaII from '../assets/App ULP JAVA ii.png';
-import appULPJava from '../assets/App ULP JAVA.png';
-import masSalud from '../assets/Mas Salud.jpg';
-import masSalud1 from '../assets/Mas salud 1.jpg';
+import experiencia1 from '../assets/Experiencia1.gif';
+import experiencia2 from '../assets/Experiencia2.gif';
 
 const titulo = "DESARROLLADORA FULLSTACK";
 const fecha = "Desde Noviembre 2022 / Septiembre 2024";
@@ -11,18 +9,15 @@ const fecha = "Desde Noviembre 2022 / Septiembre 2024";
 const experiencias = ref([
     {
         id: 1,
-        src1: appULPJava,
-        src2: appULPJavaII,
-        parrafo: "Formé parte de un equipo en el desarrollo de una aplicación para la Universidad de La Punta, en San Luis. Esta aplicación, construida en Java con una interfaz de usuario en Java Swing, se conecta a una base de datos para gestionar el alta, baja y modificación de cátedras, calificaciones y alumnos. Mi participación incluyó tanto el diseño de la interfaz como la implementación de funcionalidades críticas, contribuyendo a optimizar la gestión académica."
+        gif: experiencia1,
+        parrafo: "Formé parte de un equipo en el desarrollo de una aplicación para la Universidad de La Punta, en San Luis."
     },
     {
         id: 2,
-        src1: masSalud,
-        src2: masSalud1,
-        parrafo: "Formé parte del grupo 'CTRL-Z' en el desarrollo de una aplicación para una organización similar a un consultorio médico. Este proyecto fue desarrollado en Java utilizando Java Swing para la interfaz gráfica y está conectado a una base de datos. El proyecto incluyó la realización de pruebas, diseño de la interfaz, selección de colores e imágenes, así como la implementación del patrón MVC, gestion de reuniones para coordinar el desarrollo y pruebas, similar a la metodología SCRUM. La aplicación permite la gestión de afiliados, prestadores, especialidades y órdenes médicas."
+        gif: experiencia2,
+        parrafo: "Formé parte del grupo 'CTRL-Z' en el desarrollo de una aplicación para una organización similar a un consultorio médico. "
     }
 ]);
-
 </script>
 
 <template>
@@ -31,10 +26,9 @@ const experiencias = ref([
         <p class="fecha">{{ fecha }}</p>
         <ul class="listado">
             <li class="item" v-for="experiencia in experiencias" :key="experiencia.id">
-                <p class="parrafo">{{ experiencia.parrafo }}</p>
-                <div class="imagenes">
-                    <img class="imagen" :src="experiencia.src1" width="100%" :alt="Desarrollo">
-                    <img class="imagen" :src="experiencia.src2" width="50%" :alt="Desarrollo">
+                <div class="flex-container">
+                    <img :src="experiencia.gif" alt="Experiencia" class="imagen" />
+                    <p class="parrafo">{{ experiencia.parrafo }}</p>
                 </div>
             </li>
         </ul>
@@ -52,17 +46,18 @@ const experiencias = ref([
     margin: 0;
 }
 
-.imagenes {
+.flex-container {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    margin-top: 1rem;
+    align-items: center; /* Cambia a center para alinear verticalmente */
+    gap: 1rem; /* Espacio entre la imagen y el texto */
+    margin-bottom: 1rem; /* Espacio entre cada experiencia */
 }
 
-.imagen{
-    width: 45%;
-    height: auto;
+.imagen {
+    width: 100px; /* Establece un tamaño fijo para las imágenes */
+    height: auto; /* Mantiene la relación de aspecto */
 }
+
 .titulo {
     font-size: 1.5rem;
     color: black;
@@ -78,15 +73,17 @@ const experiencias = ref([
 .listado {
     display: flex;
     flex-direction: column;
+    list-style-type: none; /* Elimina las viñetas */
+    padding: 0; /* Elimina el padding predeterminado */
 }
 
 .item {
     padding: 1rem;
-    gap: 1rem;
 }
-.parrafo{
+
+.parrafo {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.5;
     word-wrap: break-word;
 }
