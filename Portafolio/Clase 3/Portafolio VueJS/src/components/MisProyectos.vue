@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
-import imgULP1 from '../assets/App ULP Java.png';
-import imgULP2 from '../assets/App ULP Java ii.png';
+import imgULP1 from '../assets/App ULP JAVA.png';
+import imgULP2 from '../assets/App ULP JAVA ii.png';
 import imgMasSalud1 from '../assets/Mas Salud.jpg';
 import imgMasSalud2 from '../assets/Mas salud 1.jpg';
 import CAC from '../assets/CAC.png';
