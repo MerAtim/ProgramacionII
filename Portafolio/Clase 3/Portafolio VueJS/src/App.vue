@@ -4,6 +4,7 @@ import MiEducacion from './components/MiEducacion.vue';
 import NavBar from './components/NavBar.vue';
 import MiExperiencia from './components/MiExperiencia.vue';
 import MisProyectos from './components/MisProyectos.vue';
+import MisHabilidades from './components/MisHabilidades.vue';
 </script>
 
 <template>
@@ -27,7 +28,7 @@ import MisProyectos from './components/MisProyectos.vue';
             </section>
             <section id="habilidades">
                 <h2>Habilidades</h2>
-                <!-- Contenido de habilidades aquí -->
+                <MisHabilidades />
             </section>
             <section id="intereses">
                 <h2>Intereses</h2>
@@ -39,10 +40,10 @@ import MisProyectos from './components/MisProyectos.vue';
 
 <style scoped>
 .contenedor-principal {
-    display: flex; /* O 'grid', según lo que prefieras */
-    flex-direction: column; /* Alinea los elementos en una columna */
-    align-items: center; /* Centra los elementos horizontalmente */
-    gap: 2rem; /* Espaciado entre las secciones */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    gap: 2rem; 
 }
 </style>
 

@@ -41,15 +41,16 @@ const proyectos = ref([
                 <div class="imagenes">
                     <img v-for="(img, index) in proyecto.imagenes" :key="index" :src="img" alt="Proyecto Imagen" class="proyecto-imagen"/>
                 </div>
-                <div class="proyecto-links">
-                    <a :href="proyecto.github" target="_blank">
-                        <img :src="gitNube" alt="GitHub" class="git-button" />
-                    </a>
-                </div>
+            </div>
+            <div class="proyecto-links">
+                <a :href="proyecto.github" target="_blank">
+                    <img :src="gitNube" alt="GitHub" class="git-button" />
+                </a>
             </div>
         </div>
     </div>
 </template>
+
 
 <style>
 .galeria {
@@ -61,7 +62,8 @@ const proyectos = ref([
     gap: 20px; /* Espacio entre proyectos */
     padding: 20px;
     justify-content: center;
-    background: var(--bgColor);
+    background-color: #E24A68;
+    border-radius: 8px;
 }
 
 .proyecto {
@@ -69,21 +71,23 @@ const proyectos = ref([
     flex-direction: column;
     border: 2px solid #ddd;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #d294b3;
     flex: 1 1 300px; /* Proyectos ocupan mínimo 300px, ajustable */
     max-width: 300px; /* Ajusta según necesites */
+    margin-bottom: 20px; /* Espacio entre las tarjetas */
 }
 
 .proyecto-info {
     padding: 15px;
     text-align: center;
+    flex-grow: 1; /* Permite que este contenedor crezca y ocupe el espacio disponible */
 }
 
 .proyecto-links {
     display: flex;
     justify-content: center; /* Centra el contenido horizontalmente */
     margin-top: 10px;
-    border: none;
+    padding-bottom: 15px; /* Espacio al fondo de la tarjeta */
 }
 
 .proyecto-links a {
@@ -132,4 +136,5 @@ const proyectos = ref([
     gap: 10px; /* Espacio entre imágenes */
     justify-content: center;
 }
+
 </style>
