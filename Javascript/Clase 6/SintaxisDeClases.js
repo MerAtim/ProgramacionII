@@ -1,8 +1,8 @@
 class Persona{ // Clase Padre
 
     static contadorPersona = 0; // Atributo estatico
-    //email = "valor default email"; // Atributo No Estatico
-  
+    email = "valor default email"; // Atributo No Estatico
+
     static get MAX_OBJETO(){ // Este metodo simula una constante
         return 5;
     }
@@ -17,7 +17,7 @@ class Persona{ // Clase Padre
             console.log("Se ha superado el maximo de objetos permitidos.");
         }
         //console.log("Se incrementa el contador: " + Persona.contadorObjetosPersona);
-   }
+}
 
     get nombre(){ // Obtener/mostrar un dato
         return this._nombre;
@@ -50,7 +50,7 @@ class Persona{ // Clase Padre
     }
 
     static saludar2(persona){
-        console.log(persona.nombre);
+        console.log("Metodo saludar2: "+persona.nombre +" "+persona.apellido);
     }
 }
 
@@ -74,7 +74,7 @@ class Empleado extends Persona{ // Clase hija o subclase
 }
 
 let persona1 = new Persona("Mariana", "Aguilera");
-let persona2 = new Persona("Melina", "Aguilar", "");
+let persona2 = new Persona("Melina", "Aguilar",);
 console.log(persona1,"\n",persona2); // Mostramos ambos objetos
 
 console.log("\nUsamos el método GET():");
@@ -106,12 +106,15 @@ console.log("\nMetodos estaticos: ");
 Persona.saludar();
 Persona.saludar2(persona1);
 
+Empleado.saludar();
+Empleado.saludar2(empleado1);
+
 //Atributo estatico
-//console.log(persona1.contadorObjetosPersona); //No se puede acceder a un atributo estatico desde un objeto. 
+//console.log(persona1.contadorObjetosPersona); //No se puede acceder a un atributo estatico desde un objeto.
 //Solamente desde la clase.
 console.log("\nAtributos estaticos: ");
-console.log(Persona.contadorObjetosPersona);
-console.log(Empleado.contadorObjetosPersona); // Las clases hijas heredan los atributos estaticos
+console.log(Persona.contadorPersona);
+console.log(Empleado.contadorPersona); // Las clases hijas heredan los atributos estaticos
 
 console.log("Atributo No estatico");
 console.log(persona1.email); // se accede desde el objeto
