@@ -40,10 +40,10 @@ import MisHabilidades from './components/MisHabilidades.vue';
 
 <style scoped>
 .contenedor-principal {
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 2rem; 
+    gap: 2rem;
 }
 </style>
 

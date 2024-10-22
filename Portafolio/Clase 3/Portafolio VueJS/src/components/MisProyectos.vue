@@ -1,11 +1,11 @@
 <script setup>
 import { ref } from "vue";
-import imgULP1 from '../assets/App ULP JAVA.png';
 import imgULP2 from '../assets/App ULP JAVA ii.png';
-import imgMasSalud1 from '../assets/Mas Salud.jpg';
-import imgMasSalud2 from '../assets/Mas salud 1.jpg';
+import imgULP1 from '../assets/App ULP JAVA.png';
 import CAC from '../assets/CAC.png';
 import gitNube from '../assets/GitNube.png';
+import imgMasSalud1 from '../assets/Mas Salud.jpg';
+import imgMasSalud2 from '../assets/Mas salud 1.jpg';
 
 const proyectos = ref([
     {
