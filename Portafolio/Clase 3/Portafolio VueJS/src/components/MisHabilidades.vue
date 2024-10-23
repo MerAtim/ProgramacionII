@@ -19,7 +19,7 @@
   import javaGif from '@/assets/Java.gif';
   import pythonGif from '@/assets/Python.gif';
   import javascriptGif from '@/assets/js.gif';
-  import vueGif from '@/assets/Vuejs.gif'; 
+  import vueGif from '@/assets/Vuejs.gif';
   import nodeGif from '@/assets/node.gif';
   import gitGif from '@/assets/git.gif';
   import htmlGif from '@/assets/HTML.gif';
@@ -140,6 +140,4 @@
   height: 50px;
   margin-bottom: 30px;
 }
-
   </style>
-  
