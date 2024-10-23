@@ -47,10 +47,10 @@ public class Cliente extends Persona {
     public String toString() {
         StringBuilder sb = new StringBuilder(); // Usa StringBuilder para crear la cadena
         sb.append("Cliente ");
-        sb.append(" idCliente: ").append(idCliente); // Agrega el id del cliente
-        sb.append(", fechaRegistro: ").append(fechaRegistro); // Agrega la fecha de registro
-        sb.append(", vip: ").append(vip); // Agrega el estado VIP
-        sb.append(", ").append(super.toString()); // Incluye los detalles de la clase Persona
+        sb.append("idCliente: ").append(idCliente); // Agrega el id del cliente
+        sb.append("\nfechaRegistro: ").append(fechaRegistro); // Agrega la fecha de registro
+        sb.append("\nvip: ").append(vip); // Agrega el estado VIP
+        sb.append("\n").append(super.toString()); // Incluye los detalles de la clase Persona
         return sb.toString(); // Retorna la cadena con los detalles del cliente
     }
 }

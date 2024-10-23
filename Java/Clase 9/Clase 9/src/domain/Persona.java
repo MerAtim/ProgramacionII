@@ -82,9 +82,9 @@ public class Persona {
         StringBuilder sb = new StringBuilder(); // Crea un nuevo StringBuilder para construir la cadena
         sb.append("Persona "); // Agrega el texto "Persona"
         sb.append("nombre: ").append(nombre); // Agrega el nombre
-        sb.append(", genero: ").append(genero); // Agrega el género
-        sb.append(", edad: ").append(edad); // Agrega la edad
-        sb.append(", direccion: ").append(direccion); // Agrega la dirección
+        sb.append("\ngenero: ").append(genero); // Agrega el género
+        sb.append("\nedad: ").append(edad); // Agrega la edad
+        sb.append("\ndireccion: ").append(direccion); // Agrega la dirección
         return sb.toString(); // Retorna la cadena completa
     }   
 }
