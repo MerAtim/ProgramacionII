@@ -5,9 +5,9 @@ No pueden ser accedidos desde otras clases, ni siquiera si están en la misma je
 PROTECTED: Los miembros declarados como protected son accesibles dentro de la propia clase, 
 en clases del mismo paquete y en clases que heredan de la clase (incluso si están en un paquete diferente). 
 Esto permite un mayor acceso que private, pero menos que public.
-public: Acceso total (todos).
-private: Acceso restringido (solo dentro de la clase).
-protected: Acceso intermedio (dentro de la clase, mismo paquete, y subclases).
+-public: Acceso total (todos).
+-private: Acceso restringido (solo dentro de la clase).
+-protected: Acceso intermedio (dentro de la clase, mismo paquete, y subclases).
 */
 package domain;
 

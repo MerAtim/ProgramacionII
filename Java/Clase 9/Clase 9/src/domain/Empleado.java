@@ -6,10 +6,17 @@ public class Empleado extends Persona {
     private double sueldo; // Sueldo del empleado
     private static int contadorEmpleados; // Contador estático para generar idEmpleado únicos
 
-    // Constructor de la clase Empleado
-    public Empleado(String nombre, double sueldo) {
-        super(nombre); // Llama al constructor de la clase padre (Persona)
+    // Constructores de la clase Empleado
+
+    public Empleado() {
         this.idEmpleado = ++Empleado.contadorEmpleados; // Incrementa y asigna el idEmpleado
+    }
+    
+    
+    public Empleado(String nombre, double sueldo) {
+        // super(nombre); // Llama al constructor de la clase padre (Persona)
+        this(); //Estamos llamando al constructor interno
+        this.nombre = nombre;
         this.sueldo = sueldo; // Asigna el sueldo del empleado
     }
 
@@ -34,7 +41,8 @@ public class Empleado extends Persona {
         StringBuilder sb = new StringBuilder(); // Usa StringBuilder para crear la cadena
         sb.append("Empleado ");
         sb.append(" idEmpleado: ").append(idEmpleado); // Agrega el idEmpleado
-        sb.append(", sueldo: ").append(sueldo); // Agrega el sueldo
+        sb.append("\nsueldo: ").append(sueldo); // Agrega el sueldo
+        sb.append("\n").append(super.toString()); // Incluye los detalles de la clase Persona
         return sb.toString(); // Retorna la cadena con los detalles del empleado
     }
 }
