@@ -48,14 +48,14 @@ const experiencias = ref([
 
 .flex-container {
     display: flex;
-    align-items: center; /* Cambia a center para alinear verticalmente */
-    gap: 1rem; /* Espacio entre la imagen y el texto */
-    margin-bottom: 1rem; /* Espacio entre cada experiencia */
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .imagen {
-    width: 100px; /* Establece un tamaño fijo para las imágenes */
-    height: auto; /* Mantiene la relación de aspecto */
+    width: 100px;
+    height: auto;
 }
 
 .titulo {
@@ -65,7 +65,7 @@ const experiencias = ref([
 }
 
 .fecha {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: rgb(42, 41, 41);
     margin-bottom: 1rem;
 }
@@ -73,8 +73,8 @@ const experiencias = ref([
 .listado {
     display: flex;
     flex-direction: column;
-    list-style-type: none; /* Elimina las viñetas */
-    padding: 0; /* Elimina el padding predeterminado */
+    list-style-type: none;
+    padding: 0;
 }
 
 .item {
@@ -83,8 +83,32 @@ const experiencias = ref([
 
 .parrafo {
     margin: 0;
-    font-size: 1.25rem;
-    line-height: 1.5;
+    font-size: 1.1rem;
+    line-height: 1.4;
     word-wrap: break-word;
+    font-weight: 550;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .imagen {
+        width: 80px; /* Reduce el tamaño de la imagen */
+    }
+
+    .parrafo {
+        font-size: 1rem; /* Ajuste de tamaño de texto en pantallas chicas */
+    }
+
+    .card {
+        padding: 1rem; /* Reduce el padding en pantallas pequeñas */
+    }
+    .titulo, .fecha{
+        font-size: 20px;
+    }
 }
 </style>

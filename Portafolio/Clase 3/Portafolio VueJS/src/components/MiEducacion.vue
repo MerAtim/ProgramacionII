@@ -65,14 +65,14 @@ body {
   display: grid; /* Utiliza el modelo de caja de cuadrícula */
   align-content: center; /* Centra verticalmente el contenido dentro de la cuadrícula */
   gap: 2rem; /* Espaciado entre los elementos de la cuadrícula */
-  padding: 2rem; /* Espaciado interno alrededor del cuerpo */
+  padding: 1rem; /* Espaciado interno alrededor del cuerpo */
   color: var(--color); /* Aplica el color de texto definido en la variable */
   background: var(--bgColor); /* Aplica el color de fondo definido en la variable */
 }
 
 /* Estilos para la lista */
 ul {
-    margin-top: 2rem;
+  margin-top: 2rem;
   --col-gap: 2rem; /* Espacio entre las columnas de la cuadrícula */
   --row-gap: 2rem; /* Espacio entre las filas de la cuadrícula */
   --line-w: 0.25rem; /* Ancho de la línea que conecta los elementos de la lista */
@@ -81,8 +81,8 @@ ul {
   grid-auto-columns: max-content; /* Las columnas se ajustan automáticamente al contenido */
   column-gap: var(--col-gap); /* Espacio entre las columnas */
   list-style: none; /* Elimina las viñetas predeterminadas de la lista */
-  width: min(60rem, 90%); /* Limita el ancho de la lista al mínimo entre 60rem y el 90% del ancho de la ventana */
-  margin-inline: auto; /* Centra la lista horizontalmente */
+  width: min(50rem, 80%); /* Limita el ancho de la lista al mínimo entre 50rem y el 80% del ancho de la ventana */
+  margin-inline: 20px; /* Centra la lista horizontalmente */
 }
 
 /* Estilo para la línea vertical que conecta los elementos de la lista */
@@ -179,7 +179,6 @@ ul li .descripcion::before {
   position: absolute; /* Posiciona la sombra respecto al contenedor del título o descripción */
   width: 90%; /* Ancho de la sombra */
   height: 0.5rem; /* Altura de la sombra */
-  background: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro para simular una sombra */
   left: 50%; /* Centra la sombra horizontalmente */
   border-radius: 50%; /* Bordes redondeados para la sombra */
   filter: blur(4px); /* Aplica un desenfoque para hacer la sombra más suave */
@@ -193,6 +192,10 @@ ul li .title::before {
 ul li .descripcion::before {
 z-index: -1; /* Coloca la sombra detrás del contenido */
 bottom: 0.25rem; /* Coloca la sombra justo*/
+}
+
+.title{
+  color: lightseagreen;
 }
 
 .enlace{
@@ -258,4 +261,23 @@ ul li:nth-child(odd) .fecha {
 .credits a {
   color: var(--color); /* Aplica el color de texto definido en la variable */
 }
+
+@media (max-width: 768px) {
+  ul {
+    width: 100%; /* Haz que el contenedor ocupe el 100% del ancho de la pantalla */
+    padding: 1rem; /* Reduce el padding alrededor del contenido */
+  }
+
+  .title, .descripcion {
+    font-size: 0.9rem; /* Reduce el tamaño de fuente */
+    padding-inline: 1rem; /* Reduce el padding horizontal */
+  }
+
+  .enlace {
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+    width: auto; /* Haz que el ancho del enlace se ajuste automáticamente */
+    height: auto; /* Ajusta la altura para que sea dinámica */
+  }
+}
+
 </style>

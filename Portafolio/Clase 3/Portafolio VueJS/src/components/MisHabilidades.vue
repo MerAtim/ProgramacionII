@@ -30,6 +30,16 @@
   import photoshopGif from '@/assets/Photoshop.gif';
   import inglesGif from '@/assets/ingles.gif';
   import espanolGif from '@/assets/Español.gif';
+  import postmanGif from '@/assets/Postman.gif';
+  import dbeaver from '@/assets/Dbeaver.gif';
+  import eclipse from '@/assets/Eclipse.gif';
+  import intellij from '@/assets/Intellij.gif';
+  import netbeans from '@/assets/Netbeans.gif';
+  import pycharm from '@/assets/Pycharm.gif';
+  import sql from '@/assets/Sql.gif';
+  import sublime from '@/assets/SublimeText.gif';
+  import vscode from '@/assets/Vscode.gif';
+
   
   export default {
     name: 'MisHabilidades',
@@ -41,25 +51,34 @@
             habilidades: [
               { nombre: 'Java', nivel: 'Básico', gif: javaGif },
               { nombre: 'Python', nivel: 'Básico', gif: pythonGif },
-              { nombre: 'JavaScript', nivel: 'Básico', gif: javascriptGif },
-              { nombre: 'Vue.js', nivel: 'Básico', gif: vueGif },
-              { nombre: 'Node.js', nivel: 'Básico', gif: nodeGif },
-            ]
+              { nombre: 'SQL', nivel: 'Básico', gif: sql },
+              { nombre: 'JavaScript', nivel: 'Básico', gif: javascriptGif }
+          ]
           },
           {
-            nombre: 'Desarrollo Web:',
+            nombre: 'Desarrollo Web y Bibliotecas',
             habilidades: [
               { nombre: 'HTML', nivel: 'Intermedio', gif: htmlGif },
               { nombre: 'CSS', nivel: 'Avanzado', gif: cssGif },
+              { nombre: 'Vue.js', nivel: 'Básico', gif: vueGif },
+              { nombre: 'Node.js', nivel: 'Básico', gif: nodeGif }
             ]
           },
           {
-            nombre: 'Herramientas:',
+            nombre: 'Herramientas y Frameworks:',
             habilidades: [
               { nombre: 'Figma', nivel: 'Intermedio', gif: figmaGif },
               { nombre: 'Adobe Illustrator', nivel: 'Intermedio', gif: adobeIllustratorGif },
               { nombre: 'Photoshop', nivel: 'Intermedio', gif: photoshopGif },
+              { nombre: 'Postman', nivel: 'Intermedio', gif: postmanGif },
+              { nombre: 'DBeaver', nivel: 'Intermedio', gif: dbeaver },
+              { nombre: 'Eclipse', nivel: 'Intermedio', gif: eclipse },
               { nombre: 'Git', nivel: 'Intermedio', gif: gitGif },
+              { nombre: 'Intellij Idea', nivel: 'Intermedio', gif: intellij },
+              { nombre: 'Netbeans', nivel: 'Intermedio', gif: netbeans },
+              { nombre: 'Pycharm', nivel: 'Intermedio', gif: pycharm },
+              { nombre: 'Sublime Text', nivel: 'Intermedio', gif: sublime },
+              { nombre: 'Visual Studio', nivel: 'Intermedio', gif: vscode },
             ]
           },
           {
@@ -72,7 +91,7 @@
             nombre: 'Idiomas:',
             habilidades: [
               { nombre: 'Inglés', nivel: 'Avanzado', gif: inglesGif },
-              { nombre: 'Español', nivel: 'Nativo', gif: espanolGif },
+              { nombre: 'Español', nivel: 'Nativo', gif: espanolGif }
             ]
           },
         ]
@@ -129,6 +148,7 @@
   .detalle {
   margin-top: 10px; /* Espaciado entre la imagen y el texto */
   text-align: center; /* Centra el texto */
+  color: black;
 }
   
   h4, h3 {

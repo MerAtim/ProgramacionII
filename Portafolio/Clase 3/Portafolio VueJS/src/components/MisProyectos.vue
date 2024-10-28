@@ -1,31 +1,30 @@
 <script setup>
 import { ref } from "vue";
 import imgULP2 from '../assets/App ULP JAVA ii.png';
-import imgULP1 from '../assets/App ULP JAVA.png';
 import CAC from '../assets/CAC.png';
 import gitNube from '../assets/GitNube.png';
-import imgMasSalud1 from '../assets/Mas Salud.jpg';
-import imgMasSalud2 from '../assets/Mas salud 1.jpg';
+import imgMasSalud1 from '../assets/Mas Salud.png';
+
 
 const proyectos = ref([
     {
         id: 1,
         nombre: "ULP Universidad",
         descripcion: "Creamos una aplicacion de gestión academica. Esta aplicación, construida en Java con una interfaz de usuario en Java Swing, se conecta a una base de datos para gestionar el alta, baja y modificación de cátedras, calificaciones y alumnos. Mi participación incluyó tanto el diseño de la interfaz como la implementación de funcionalidades críticas, contribuyendo a optimizar la gestión académica.",
-        imagenes: [imgULP1, imgULP2],
+        imagenes: [imgULP2],
         github: "https://github.com/MerAtim/Proyecto-ULP-GRUPO-67"
     },
     {
         id: 2,
         nombre: "Mas Salud",
         descripcion: "Creamos una aplicacion de gestion medica. Este proyecto fue desarrollado en Java utilizando Java Swing para la interfaz gráfica y está conectado a una base de datos. El proyecto incluyó la realización de pruebas, diseño de la interfaz, selección de colores e imágenes, así como la implementación del patrón MVC, gestión de reuniones para coordinar el desarrollo y pruebas, similar a la metodología SCRUM. La aplicación permite la gestión de afiliados, prestadores, especialidades y órdenes médicas.",
-        imagenes: [imgMasSalud1, imgMasSalud2],
+        imagenes: [imgMasSalud1],
         github: "https://github.com/MerAtim/clonMasSalud21-10"
     },
     {
         id: 3,
         nombre: "CAC Turismo",
-        descripcion: "Creamos una pagina Web de Turismo Argentino.Este proyecto fue desarrollado en Java el Backend y en HTML, CSS y JavaScript para el Frontend. Tambien esta contectado a una base de datos que alberga lugares turisticos con su descripcion e imagenes. Se puedegestionar en la pagina web el Alta,Baja y Modificar de cada lugar turístico.",
+        descripcion: "Creamos una pagina Web de Turismo Argentino. Este proyecto fue desarrollado en Java el Backend y en HTML, CSS y JavaScript para el Frontend. Tambien esta contectado a una base de datos que alberga lugares turisticos con su descripcion e imagenes. Se puede gestionar en la pagina web el Alta, Baja y Modificar de cada lugar turístico.",
         imagenes: [CAC],
         github: "https://github.com/MerAtim/CAC-Turismo"
     },
@@ -39,12 +38,13 @@ const proyectos = ref([
                 <h3>{{ proyecto.nombre }}</h3>
                 <p>{{ proyecto.descripcion }}</p>
                 <div class="imagenes">
-                    <img v-for="(img, index) in proyecto.imagenes" :key="index" :src="img" alt="Proyecto Imagen" class="proyecto-imagen"/>
+                    <img v-for="(img, index) in proyecto.imagenes" :key="index" :src="img" alt="Proyecto" class="proyecto-imagen"/>
                 </div>
             </div>
             <div class="proyecto-links">
                 <a :href="proyecto.github" target="_blank">
                     <img :src="gitNube" alt="GitHub" class="git-button" />
+                    <p class="mensaje">Link al proyecto en Github</p>
                 </a>
             </div>
         </div>
@@ -54,13 +54,13 @@ const proyectos = ref([
 
 <style>
 .galeria {
-    width: 637.87;
+    width: 100%;
     max-width: 1200px; /* Ajusta según lo que necesites */
     margin: 0 auto; /* Centra el contenedor */
     display: flex;
     flex-wrap: wrap;
     gap: 20px; /* Espacio entre proyectos */
-    padding: 20px;
+    padding: 10px;
     justify-content: center;
     background-color: #E24A68;
     border-radius: 8px;
@@ -72,8 +72,8 @@ const proyectos = ref([
     border: 2px solid #ddd;
     border-radius: 8px;
     background-color: #d294b3;
-    flex: 1 1 300px; /* Proyectos ocupan mínimo 300px, ajustable */
-    max-width: 300px; /* Ajusta según necesites */
+    flex: 1 1 390px; /* Proyectos ocupan mínimo 400px, ajustable */
+    max-width: 400px; /* Ajusta según necesites */
     margin-bottom: 20px; /* Espacio entre las tarjetas */
 }
 
@@ -85,21 +85,26 @@ const proyectos = ref([
 
 .proyecto-links {
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: center; /* Centra los elementos horizontalmente */
     margin-top: 10px;
     padding-bottom: 15px; /* Espacio al fondo de la tarjeta */
 }
 
 .proyecto-links a {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-decoration: none; /* Opcional: elimina el subrayado */
     border: none; /* Elimina el borde del enlace */
     outline: none; /* Elimina el contorno al hacer foco */
-    text-decoration: none; /* Opcional: elimina el subrayado */
 }
 
 .proyecto-imagen {
     width: 100%; /* Ajusta el ancho al 100% del contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
     justify-content: center;
+    border-radius: 10px;
 }
 
 .proyecto-info h3 {
@@ -137,4 +142,31 @@ const proyectos = ref([
     justify-content: center;
 }
 
+.mensaje{
+    font-size: smaller;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .galeria {
+        padding: 5px;
+    }
+
+    .proyecto {
+        max-width: 100%; /* Ocupa toda la pantalla en dispositivos pequeños */
+        margin-bottom: 15px;
+    }
+
+    .proyecto-info h3 {
+        font-size: 1.2em;
+    }
+
+    .proyecto-info p {
+        font-size: 0.9em;
+    }
+
+    .git-button {
+        width: 80px; /* Ajusta el tamaño del botón de GitHub */
+    }
+}
 </style>
