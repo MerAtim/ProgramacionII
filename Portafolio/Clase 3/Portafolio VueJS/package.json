@@ -10,6 +10,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "particles.js": "^2.0.0",
+    "stats.js": "^0.17.0",
     "vue": "^3.4.29"
   },
   "devDependencies": {
