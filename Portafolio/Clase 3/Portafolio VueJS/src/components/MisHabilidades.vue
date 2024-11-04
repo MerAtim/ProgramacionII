@@ -160,4 +160,26 @@
   height: 50px;
   margin-bottom: 30px;
 }
+
+@media (max-width: 768px) {
+  .mis-habilidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 100%;
+    padding: 10px;
+    }
+
+  .habilidades-container {
+    justify-content: center;
+  }
+
+  .habilidad-card {
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+}
   </style>
