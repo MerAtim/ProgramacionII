@@ -295,7 +295,7 @@ git tag v1.0
 
 ### Si necesitas cambiar el tag (por ejemplo, apuntarlo a un commit diferente), deberás eliminar el tag existente primero, ya que no puedes sobrescribirlo directamente.
 
-```bash
+    ```bash
 git tag -d v1.0  # Elimina el tag
 git tag v1.0 -m "nuevoCommit"
 ### Crea un nuevo tag apuntando a un commit diferente
@@ -304,19 +304,19 @@ git tag v1.0 -m "nuevoCommit"
 
 ### Considera usar tags anotados en lugar de tags ligeros. Los tags anotados incluyen más información (como el autor y la fecha) y son más fáciles de manejar:
 
-```bash
+    ```bash
   git tag -a v1.0 -m "Versión 1.0"  # Crea un tag anotado
 ![CapturaGit27](https://github.com/user-attachments/assets/e15d842b-a3f7-4438-8081-7c30a9d343c6)
 
 ### Para ver la información de un tag anotado en Git, puedes usar el siguiente comando:
 
-```bash
+    ```bash
   git show Version4.0
 ### Tambien se pueden ver los detalles de los tags con este comando:
 
 ### Ver detalles de todos los tags:
 
-```bash
+    ```bash
   git show-ref --tags
 ![CapturaGit28](https://github.com/user-attachments/assets/747a8e40-6018-425f-80dc-5c6259610ab0)
 
@@ -374,6 +374,8 @@ Por defecto, cualquier persona puede clonar o descargar tu proyecto desde GitHub
 **Cómo agregar colaboradores en Github**
 **Solo debemos entrar a la configuración de colaboradores de nuestro proyecto. Se encuentra en:**
 
+![CapturaGit33](https://github.com/user-attachments/assets/1c230d50-2150-4a02-a0c1-4cf812a2b947)
+
 **Repositorio > Settings > Collaborators
 Ahí, debemos añadir el email o username de los nuevos colaboradores.**
 
@@ -389,13 +391,19 @@ git pull origin main # Traer el repositorio remoto
 
 git push --set-upstream origin main  # Ejecutar el cambio, el error arreglado
 
+![CapturaGit34](https://github.com/user-attachments/assets/4fbc663c-10b4-4ef7-89c8-2297fc06edf8)
+
 Comienzo del colaborador
 
 cd Documentos  # Abre git bash
 
 mkdir class-git  # Crea la carpeta o directorio de trabajo
 
+![CapturaGit35](https://github.com/user-attachments/assets/b8e0cbc7-dc52-4800-be0c-f59f78889898)
+
 ls -al  # Revisa lo que va haciendo, los archivos o directorios que tiene
+
+![CapturaGit36](https://github.com/user-attachments/assets/de0c6ec1-3799-4855-94db-86836089ebbd)
 
 ##### 1. No debe hacer un git init, debe buscar el repositorio en el cual esta invitado a participar, por supuesto en GitHub.
 
@@ -407,6 +415,8 @@ git clone url-copiada-github #Esto hace que clonemos el repositorio
 
 ##### 4. No pide ni usuario ni contraseña si el repositorio es publico.
 
+![CapturaGit37](https://github.com/user-attachments/assets/88c898da-e84f-47c7-9ded-6a80ec71dea1)
+
 code . #Abre VSC y comienza con cambios, o abre el siguiente comando para hacer modificaciones
 
 vim historia.txt #Vamos a escribir: Aquí esta un nuevo colaborador
@@ -416,6 +426,8 @@ vim escribimos el mensaje del commit #Esto en Ubuntu
 ctrl + x
 
 s #Para un si
+
+![CapturaGit38](https://github.com/user-attachments/assets/b42693a4-63d8-4776-b9ea-b3a6fa7c75f1)
 
 enter #Terminado el mensaje del commit
 
@@ -437,7 +449,11 @@ gti branch #Para ver las ramas que se trajo, no se trae sino solo main, si hay m
 
 git log #Para ver toda las historia
 
+![CapturaGit39](https://github.com/user-attachments/assets/eb6374fc-9a24-48c6-aba4-35d7cccfb86f)
+
 git log --graph #Vemos el grafico de las diferentes ramas y del commit que acabamos de hacer que esta en el main, Git es una base de datos de toda las historia de todo lo que se ha hecho
+
+![CapturaGit40](https://github.com/user-attachments/assets/39a8fcf5-3b42-4a03-873a-73ac864d0cbe)
 
 git push origin main #Va a pedir un email que será el del colaborador, su contraseña.
 
@@ -461,7 +477,11 @@ git fetch
 
 git log --stat #Se verá claro que el colaborador ingreso su primer commit
 
+![CapturaGit41](https://github.com/user-attachments/assets/0929d203-e6dc-4e26-92b5-dbe6c6362c6b)
+
 ##### 10. A partir de ahora el dueño del repositorio y el colaborador deberán repartir el trabajo, esto se hace con distintas ramas de trabajo: el dueño trabajará desde la rama header y el colaborador desde la rama footer, al final cuando se termine, se hara un merge para terminar el proyecto.
+
+![CapturaGit42](https://github.com/user-attachments/assets/74a4fc17-9f01-4416-b8a4-4176c4cf1f2d)
 
 # **Clase 10**
 
@@ -469,6 +489,7 @@ Flujo de trabajo profesional
 
 Haciendo merge de ramas de desarrollo a main
 
+![CapturaGit43](https://github.com/user-attachments/assets/df8039a3-ae22-4bbb-8cfb-5418cfcec79b)
 
 Para poder desarrollar software de manera óptima y ordenada, necesitamos tener un flujo de trabajo profesional, que nos permita trabajar en conjunto sin interrumpir el trabajo de otros desarrolladores.
 
@@ -481,7 +502,11 @@ El programador cambia de rama
 El programador trabaja en esa rama y hace commits
 El programador sube su trabajo con git push origin #nombre_rama
 El encargado de organizar el proyecto baja, revisa y unifica todos los cambios
+
+![CapturaGit44](https://github.com/user-attachments/assets/593378e7-85a4-45aa-a3d3-a38e676e16c6)
+
 # **Clase 11**
+
 Flujo de trabajo profesional -> Archivos binarios
 
 Las imagenes cargandolas en el repositorio, representan un problema: porque las imagenes son pesadas, y si la subimos al repositorio, siempre que hagamos cambios, vamos a estar trayendo la imagen siempre, estas imagenes son binarios para GitHub, mientras mas binarios carguemos, más pesado va a ser el repositorio, algo que no es parte de las buenas practicas.
