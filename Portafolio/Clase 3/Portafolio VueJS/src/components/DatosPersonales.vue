@@ -50,6 +50,7 @@
         font-family: Montserrat, sans-serif;
         max-width: 1100px; /* Ajusta el ancho máximo de la tarjeta */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        min-width: 280px;
     }
     
 /*.card {

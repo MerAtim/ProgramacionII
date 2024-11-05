@@ -1,5 +1,12 @@
 <script setup>
 import { ref } from 'vue';
+import primerTramo from '@/assets/PrimerTramo.png';
+import segundoTramo from '@/assets/SegundoTramo.png';
+import tercerTramo from '@/assets/TercerTramo.png';
+import testing1 from '@/assets/Testing1.png';
+import testing2 from '@/assets/TestingUtn.png';
+import java from '@/assets/JavaCAC.png';
+import MiModal from './MiModal.vue';
 const fechaColor = ref([]);
 fechaColor.value = [
 {color: '#41516c'},
@@ -12,39 +19,58 @@ fechaColor.value = [
 const educacion = ref([]);
 educacion.value = [
 {fecha: "2024", title: "Tecnicatura Universitaria en Programacion", descripcion: "Durante esta formación, adquirí conocimientos fundamentales en el desarrollo de software, incluyendo lenguajes de programación como Java, Python y JavaScript. Aprendí sobre estructuras de datos, algoritmos, bases de datos y metodologías de desarrollo ágil. Además, desarrollé habilidades en el trabajo en equipo y la resolución de problemas, lo que me permitió participar en proyectos prácticos que simularon entornos laborales reales. Esta formación me preparó para enfrentar desafíos en el campo de la tecnología y la programación."},
-{fecha: "2024", title: "Diseño Grafico" , descripcion: "En este curso, adquirí habilidades en diseño gráfico utilizando herramientas de Adobe, como Photoshop e Illustrator. Aprendí sobre principios de diseño, teoría del color y tipografía, así como técnicas para crear composiciones visuales efectivas. A través de proyectos prácticos, desarrollé la capacidad de conceptualizar y ejecutar diseños creativos para diversos medios, fortaleciendo mi portafolio y mis habilidades en comunicación visual.", enlace: "https://www.linkedin.com/in/maria-mercedes-atim-648898280/details/projects/1726911873065/single-media-viewer/?type=DOCUMENT&profileId=ACoAAER5cpgBq6zngE9irDCHCmTPd4P4ZdA9Yj0"},
-{fecha: "2024", title: "Desarrollo FullStack Java", descripcion: "En este curso, adquirí habilidades en el desarrollo de aplicaciones web utilizando Java en el backend y tecnologías como HTML, CSS y JavaScript en el frontend. Aprendí a trabajar con frameworks como Spring y Hibernate, así como a diseñar y gestionar bases de datos con MySQL.", enlace: "https://www.linkedin.com/in/maria-mercedes-atim-648898280/details/projects/1726912913785/single-media-viewer/?type=DOCUMENT&profileId=ACoAAER5cpgBq6zngE9irDCHCmTPd4P4ZdA9Yj0"},
+{fecha: "2024", title: "Desarrollo FullStack Java", descripcion: "En este curso, adquirí habilidades en el desarrollo de aplicaciones web utilizando Java en el backend y tecnologías como HTML, CSS y JavaScript en el frontend. Aprendí a trabajar con frameworks como Spring y Hibernate, así como a diseñar y gestionar bases de datos con MySQL.", enlace: java},
 {fecha: "2023", title: "Quality Assurance Manual", descripcion: "En estos cursos, adquirí conocimientos fundamentales en aseguramiento de la calidad de software. Aprendí sobre metodologías de prueba, diseño de casos de prueba, ejecución de pruebas manuales y documentación de resultados. Me familiaricé con herramientas de seguimiento de errores y prácticas de gestión de calidad, lo que me permitió desarrollar habilidades críticas para garantizar que las aplicaciones cumplan con los estándares de calidad y funcionalidad.", enlace: "", enlaces: [
-            { texto: "Diploma 1", url: "https://www.linkedin.com/in/maria-mercedes-atim-648898280/details/projects/1726907398723/single-media-viewer/?type=DOCUMENT&profileId=ACoAAER5cpgBq6zngE9irDCHCmTPd4P4ZdA9Yj0" },
-            { texto: "Diploma 2", url: "https://www.linkedin.com/in/maria-mercedes-atim-648898280/details/projects/1726908609772/single-media-viewer/?type=DOCUMENT&profileId=ACoAAER5cpgBq6zngE9irDCHCmTPd4P4ZdA9Yj0" }
+            { texto: "Diploma 1", enlace: testing1 },
+            { texto: "Diploma 2", enlace: testing2 }
         ]},
 {fecha: "2022", title: "Fundamentos de Programacion y Desarrollo FullStack Java", descripcion: "Este curso de un año me brindó una sólida base en programación. Comenzamos con dos meses de fundamentos de programación utilizando pseudocódigo, lo que me ayudó a desarrollar habilidades lógicas esenciales. Durante los siguientes diez meses, profundicé en Java y aprendí sobre bases de datos con MySQL y el entorno de desarrollo XAMPP. Como proyecto final, desarrollamos una aplicación con interfaz gráfica de usuario utilizando Java Swing, lo que me permitió aplicar mis conocimientos en un entorno práctico y real.", enlaces: [
-            { texto: "Primer Tramo Java FullStack", url: "https://www.linkedin.com/in/maria-mercedes-atim-648898280/details/projects/1726905629347/single-media-viewer/?profileId=ACoAAER5cpgBq6zngE9irDCHCmTPd4P4ZdA9Yj0" },
-            { texto: "Segundo Tramo Java FullStack", url: "https://www.linkedin.com/in/maria-mercedes-atim-648898280/details/projects/1726906409305/single-media-viewer/?type=DOCUMENT&profileId=ACoAAER5cpgBq6zngE9irDCHCmTPd4P4ZdA9Yj0" },
-            { texto: "Tercer Tramo Java FullStack", url: "https://www.linkedin.com/in/maria-mercedes-atim-648898280/details/projects/1726907067681/single-media-viewer/?type=DOCUMENT&profileId=ACoAAER5cpgBq6zngE9irDCHCmTPd4P4ZdA9Yj0" }
+            { texto: "Primer Tramo Java FullStack", enlace: primerTramo },
+            { texto: "Segundo Tramo Java FullStack", enlace: segundoTramo },
+            { texto: "Tercer Tramo Java FullStack", enlace: tercerTramo }
         ]},
 ];
+const isModalOpen = ref(false);
+const currentImage = ref('');
+
+function openModal(imageUrl) {
+  currentImage.value = imageUrl;
+  isModalOpen.value = true;
+}
+
+function closeModal() {
+  isModalOpen.value = false;
+  currentImage.value = '';
+}
 </script>
 <template>
-  <ul>
-      <li v-for="(item, index) in educacion" :key="index" :style="{ '--fecha-color': fechaColor[index].color}">
-          <div class="fecha">{{ item.fecha }}</div>
-          <h3 class="title">{{ item.title }}</h3>
-          <div class="descripcion">{{ item.descripcion }}</div>
-          <div>
-              <span v-if="item.enlace">Diploma: </span>
-              <a v-if="item.enlace" class="enlace" :href="item.enlace" target="_blank">Ver Diploma</a>
-              <div v-if="item.enlaces && item.enlaces.length">
-                  <span>Diplomas: </span>
-                  <span v-for="(enlace, enlaceIndex) in item.enlaces" :key="enlaceIndex">
-                      <a class="enlace" :href="enlace.url" target="_blank">{{ enlace.texto }}</a>
-                      <span v-if="enlaceIndex < item.enlaces.length - 1">, </span>
-                  </span>
-              </div>
+  <div>
+    <ul>
+      <li v-for="(item, index) in educacion" :key="index" :style="{ '--fecha-color': fechaColor[index].color }">
+        <div class="fecha">{{ item.fecha }}</div>
+        <h3 class="title">{{ item.title }}</h3>
+        <div class="descripcion">{{ item.descripcion }}</div>
+        <div>
+          <span v-if="item.enlace">Diploma: </span>
+          <a v-if="item.enlace" class="enlace" @click.prevent="openModal(item.enlace)">Ver Diploma</a>
+          <div v-if="item.enlaces && item.enlaces.length">
+            <span>Diplomas: </span>
+            <span v-for="(enlace, enlaceIndex) in item.enlaces" :key="enlaceIndex">
+              <a v-if="enlace.enlace" class="enlace" @click.prevent="openModal(enlace.enlace)">{{ enlace.texto }}</a>
+              <span v-if="enlaceIndex < item.enlaces.length - 1">, </span>
+            </span>
           </div>
+        </div>
       </li>
-  </ul>
+    </ul>
+
+    <!-- Componente Modal -->
+    <MiModal :isOpen="isModalOpen" :image="currentImage" :close="closeModal" />
+  </div>
 </template>
+
+
+
 
 <style scoped>
 /* Reseteo de estilos básicos para todos los elementos y pseudo-elementos */
@@ -196,6 +222,7 @@ bottom: 0.25rem; /* Coloca la sombra justo*/
 
 .title{
   color: lightseagreen;
+  font-weight: bold;
 }
 
 .enlace{
@@ -279,5 +306,4 @@ ul li:nth-child(odd) .fecha {
     height: auto; /* Ajusta la altura para que sea dinámica */
   }
 }
-
 </style>

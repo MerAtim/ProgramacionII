@@ -40,7 +40,11 @@ function toggleMenu() {
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 75%;
+  margin-top: 1%;
 }
 
 /* Mueve el botón de hamburguesa a la derecha */
@@ -119,6 +123,12 @@ a:hover {
   .nav-item {
       margin-bottom: 1rem;
       margin-right: 0;
+  }
+  .navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
   }
 }
 </style>
