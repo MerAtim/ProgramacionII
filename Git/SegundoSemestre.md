@@ -289,6 +289,7 @@ git tag
 ### Intentar crear el mismo tag nuevamente provocará un error
 
 git tag v1.0
+
 ### Esto producirá un error: "fatal: tag 'v1.0' already exists".
 
 ![CapturaGit25](https://github.com/user-attachments/assets/6f3d11f0-d413-48fb-8dfe-a6b4fd9caa18)
@@ -342,6 +343,7 @@ git tag v1.0 -m "nuevoCommit"
 sudo apt-get update
 sudo apt-get install gitk
 ```
+
 ## Repasa: ¿Qué es Git?
 
 ##### Las ramas nos permiten hacer cambios a nuestros archivos sin modificar la versión principal (main). Puedes trabajar con ramas que nunca envías a GitHub, así como pueden haber ramas importantes en GitHub que nunca uses en el repositorio local. Lo crucial es que **aprendas a manejarlas** para trabajar profesionalmente.
@@ -462,5 +464,3 @@ git fetch
 git log --stat #Se verá claro que el colaborador ingreso su primer commit
 
 ##### 10. A partir de ahora el dueño del repositorio y el colaborador deberán repartir el trabajo, esto se hace con distintas ramas de trabajo: el dueño trabajará desde la rama header y el colaborador desde la rama footer, al final cuando se termine, se hara un merge para terminar el proyecto.
-
-**
